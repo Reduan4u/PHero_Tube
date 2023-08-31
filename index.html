@@ -1,14 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHero_tube</title>
+    <link rel="shortcut icon" href="./images/Icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <h1>Hello World</h1>
+<body class="w-10/12 mx-auto">
+    <!-- Navigation Bar -->
+    <header class="py-6 border-b-2	 ">
+        <nav class="flex justify-between ">
+            <div>
+                <img src="./images/Logo.png" alt="">
+            </div>
+            <div>
+                <button class="btn btn-active btn-ghost capitalize">Sort by view</button>
+            </div>
+            <div>
+                <button class="btn btn-active bg-red-600 text-white capitalize">Blog</button>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Category Segment -->
+        <section class="mt-8 mb-12 text-center">
+            <div id="category-container" class="join gap-8">
+            </div>
+        </section>
+        <!-- Video Segment -->
+        <section id="VideoContainer" class=" grid grid-cols-4 gap-10">
+            <!-- card -->
+            <div id="VideoContainer" class="card bg-base-100 ">
+                <figure><img class="w-full h-56" src="./Rectangle 1.png" alt="Shoes" /></figure>
+                <div class="stat-value text-xs bg-gray-800 text-white w-1/3 rounded-md p-1 -mt-10 ml-52">3hrs
+                    56min
+                    ago
+                </div>
+                <div class=" flex pb-6 pt-12 gap-5">
+                    <div class="avatar">
+                        <div class="w-14 h-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <img src="./images/Icon.png" />
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="card-title">Building a Winning UX Strategy Using the Kano Model</h2>
+                        <div class="flex gap-4">
+                            <p>Reduanul Haque</p>
+                            <p>*</p>
+                        </div>
+                        <div>
+                            <p> 91K view </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- Script Files -->
+    <script src="./script_files/script.js"></script>
 </body>
 
 </html>
