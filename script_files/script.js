@@ -13,7 +13,6 @@ const handleCategory = async () => {
         categoryContainer.appendChild(div);
     });
 };
-
 // Video Segment 
 const handleVideos = async (categoryId) => {
 
@@ -21,11 +20,10 @@ const handleVideos = async (categoryId) => {
 https://openapi.programming-hero.com/api/videos/category/${categoryId}
 `)
     const data = await response.json();
-
     const videoContainer = document.getElementById('VideoContainer');
     videoContainer.innerText = "";
-
-    data.data.forEach((video) => {
+    const videos = data.data;
+    videos.forEach((video) => {
         const div = document.createElement("div");
         const postTime = video.others.posted_date;
         div.innerHTML = `
@@ -60,7 +58,6 @@ https://openapi.programming-hero.com/api/videos/category/${categoryId}
     `
         videoContainer.appendChild(div);
     })
-
     // Empty Segment 
     const videoContainer2 = document.getElementById("opps");
     videoContainer2.innerText = "";
@@ -75,7 +72,31 @@ https://openapi.programming-hero.com/api/videos/category/${categoryId}
 `
         videoContainer2.appendChild(div)
     }
+    //sortByView(videos);
 };
+/* const sortByViews = videos => {
+    videos.forEach((video2) => {
+        const views = video2.others.views;
+        console.log(views)
+    });
+}; */
+
+
+/* function sortByView(videos) {
+    const sortedVideos = videos[0].others.views;
+    console.log(sortedVideos)
+    sortedVideos.sort((a, b) => {
+        const viewsA = parseInt(a.others.views.replace('K', '')) || 0;
+        const viewsB = parseInt(b.others.views.replace('K', '')) || 0;
+        return viewsB - viewsA;
+    });
+
+    // Call a function to render the sorted videos
+    renderVideos(sortedVideos);
+
+    // Return the sorted videos as the active array
+    return sortedVideos;
+} */
 
 handleCategory()
 handleVideos("1000")
