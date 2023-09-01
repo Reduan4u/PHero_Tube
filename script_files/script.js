@@ -1,5 +1,3 @@
-
-
 // Category Segment
 const handleCategory = async () => {
 
@@ -10,12 +8,11 @@ const handleCategory = async () => {
     data.data.forEach((category) => {
         const div = document.createElement("div");
         div.innerHTML = `
-        <input onclick="handleVideos('${category.category_id}')" class="join-item btn" type="radio" name="options" aria-label="${category.category}" />
+        <input onclick="handleVideos('${category.category_id}')" class="hover:bg-red-700 hover:text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" type="radio" name="options" aria-label="${category.category}" />
         `
         categoryContainer.appendChild(div);
     });
 };
-
 
 // Video Segment 
 const handleVideos = async (categoryId) => {
@@ -24,6 +21,7 @@ const handleVideos = async (categoryId) => {
 https://openapi.programming-hero.com/api/videos/category/${categoryId}
 `)
     const data = await response.json();
+
     const videoContainer = document.getElementById('VideoContainer');
     videoContainer.innerText = "";
 
@@ -35,10 +33,13 @@ https://openapi.programming-hero.com/api/videos/category/${categoryId}
         <figure><img class="w-full h-56" src="${video.thumbnail}" alt="Shoes" /></figure>
         ${postTime > 0 ?
                 `
-        <div class="stat-value text-xs font-normal bg-gray-700 text-white rounded-md p-1 -mt-10 ml-48 mr-2 text-center">
+        <div class="stat-value text-xs font-normal bg-gray-700 text-white rounded-md p-1 mb-5 -mt-10 ml-48 mr-2 text-center">
         ${Math.floor(postTime / 3600)}hrs ${Math.floor((postTime % 3600) / 60)}min ago</div >
-                ` : ""}
-    <div class=" flex pl-4 pb-6 pt-12 gap-5">
+                ` : `
+                <div hidden class="stat-value text-xs font-normal bg-gray-700 text-white rounded-md  p-1 -mt-10 ml-48 mr-2 text-center">
+                ${Math.floor(postTime / 3600)}hrs ${Math.floor((postTime % 3600) / 60)}min ago</div >
+                        `}
+    <div class=" flex pl-4 pb-6 pt-6 gap-5">
         <div class="avatar">
             <div class="w-14 h-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img src="${video.authors[0].profile_picture}" />
@@ -60,7 +61,6 @@ https://openapi.programming-hero.com/api/videos/category/${categoryId}
         videoContainer.appendChild(div);
     })
 
-
     // Empty Segment 
     const videoContainer2 = document.getElementById("opps");
     videoContainer2.innerText = "";
@@ -68,18 +68,14 @@ https://openapi.programming-hero.com/api/videos/category/${categoryId}
     if (videoItem < 1) {
         const div = document.createElement("div");
         div.innerHTML = `
-        <div class="justify-center ">
-<img class="mt-20 mx-auto" src="./images/Icon.png" alt="">
+        <div class="justify-center my-20">
+<img class="mx-auto" src="./images/Icon.png" alt="">
 <p class="font-bold text-4xl mt-10 text-center">Oops!! Sorry, There is no <br> content here</p>
     </div>
 `
         videoContainer2.appendChild(div)
     }
-
 };
-
-
-
 
 handleCategory()
 handleVideos("1000")
