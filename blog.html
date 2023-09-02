@@ -52,22 +52,20 @@
                     frequently in modern javascript as compared to the var variable.</p> <br>
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1 text-red-800">Var</p>
                 <p>Before the advent of ES6, var declarations ruled. There are issues associated with variables declared
-                    with var, though. That is why it was necessary for new ways to declare variables to emerge.var is
+                    with var, though. That is why it was necessary for new ways to declare variables to emerge. Var is
                     function scoped when it is declared within a function. This means that it is available and can be
                     accessed only within that function. Var variables can be re-declared and updated. <br>
                 </p> <br>
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1 text-red-800">Let</p>
-                <p>Let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var
-                    declarations. It also solves the problem with var that we just covered. Let's consider why this is
-                    so. Just like var, a variable declared with let can be updated within its scope. Unlike var, a let
-                    variable cannot be re-declared within its scope. Also, since a variable cannot be declared more than
-                    once within a scope, then the problem discussed earlier that occurs with var does not happen. <br>
+                <p>Let is now preferred for variable declaration. It solves the problem of using var. Just like var, a
+                    variable declared with let can be updated within its scope. Unlike var, a let variable cannot be
+                    re-declared within its scope. Also, since a variable cannot be declared more than once within a
+                    scope, then the problem discussed earlier that occurs with var does not happen. <br>
                 </p> <br>
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1 text-red-800">Const</p>
                 <p>Variables declared with the const maintain constant values. const declarations share some
                     similarities with let declarations. This means that the value of a variable declared with const
-                    remains the same within its scope. It cannot be updated or re-declared. So if we declare a variable
-                    with const.<br> <br>
+                    remains the same within its scope. It cannot be updated or re-declared.<br> <br>
                 </p>
 
                 <p class="text-lg md:text-xl lg:text-2xl font-medium mb-2 ">The Difference Between <strong
@@ -76,15 +74,12 @@
                     in Javascript
                 </p>
                 <p>The main difference between <strong>var, let, and const</strong> in JavaScript lies in their
-                    <strong>SCOPE</strong>
-                    and <strong>MUTABILITY</strong>. Var
-                    is function-scoped and can be both re-declared and updated, making it the more flexible, yet
-                    potentially riskier option from older JavaScript standards. In contrast, Let, introduced in ES6, is
-                    block-scoped and can only be updated, not re-declared, offering a middle ground between flexibility
-                    and predictability. Const, also an ES6 addition, is block-scoped like Let but cannot be updated or
-                    re-declared, making it the strictest option for variable declarations, ideal for values that should
-                    remain constant throughout the code.
-
+                    <strong>SCOPE</strong> and <strong> MUTABILITY</strong>. Var is function-scoped and can be both
+                    re-declared and updated, making it the more flexible, yet potentially riskier option. In contrast,
+                    Let, introduced in ES6, is block-scoped and can only be updated, not re-declared, offering a middle
+                    ground between flexibility and predictability. Const, also an ES6 addition, is block-scoped like Let
+                    but cannot be updated or re-declared, making it the strictest option for variable declarations,
+                    ideal for values that should remain constant throughout the code.
                 </p>
             </div>
             <!-- QUS 2 -->
@@ -99,44 +94,41 @@
 
                 <p>
                     In JavaScript, <strong>null</strong> and <strong>undefined</strong> are two distinct values that are
-                    often used to
-                    represent the
-                    absence of a value or an uninitialized variable. However, they are used in slightly different
-                    contexts. <strong>Null</strong> in JavaScript means an empty value and is also a primitive type in
-                    JavaScript.
-                    The variable
-                    which has been assigned as null contains no value. <strong>Undefined</strong>, on the other hand,
-                    means the variable
-                    has been declared, but its value has not been assigned. </p><br>
+                    often used to represent the absence of a value or an uninitialized variable. However, they are used
+                    in slightly different contexts. <strong>Null</strong> in JavaScript means an empty value and is also
+                    a primitive type in JavaScript. The variable which has been assigned as null contains no value.
+                    <strong>Undefined</strong>, on the other hand, means the variable has been declared, but its value
+                    has not been assigned.
+                </p><br>
 
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1"> What is <strong
                         class=" text-red-800">Null</strong>?
                 </p>
-                <p>We have heard the word "null" many times in English. Its literal meaning is having no value.
-                    The
-                    same meaning is analogous to the meaning of null in programming. <br> <br>
+                <p>
+                    We have heard the word "null" many times in English. Its literal meaning is having no value. The
+                    same
+                    meaning is analogous to the meaning of null in programming. <br><br>
 
-                    Null is basically an assignment value given to a variable. The variable which has been assigned as
-                    null contains no value. When we assign null as a value to any variable, it means that it is empty or
-                    blank. It is to show
-                    that the variable has no value. Also, null is an object in JavaScript. When it gets assigned to a
-                    variable, it represents no value. The setting of the value must be done manually by the user as
-                    JavaScript never sets the value as null. An object can be emptied by setting it to null.</p>
+                    Null is basically a grant value given to a variable. The variable which has been assigned as
+                    null contains no value. When we assign null as a value to any variable, it means that it is
+                    empty or blank. It is to show that the variable has no value. Also, null is an object in
+                    JavaScript. When it gets assigned to a variable, it represents no value. The setting of the
+                    value must be done manually by the user as JavaScript never sets the value as null.
+                </p>
                 <br><br>
 
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1"> What is <strong
                         class=" text-red-800">Undefined</strong>?
                 </p>
-                <p>There is a subtle difference between null and undefined, but as a programmer, it is
-                    important that we understand it clearly. <br> <br>
-
+                <p>
                     As the name suggests, undefined means "not defined". So we declare a variable but do not assign a
-                    value to it, the variable becomes undefined. <br>
+                    value to it, the variable becomes undefined. <br> <br>
 
                     Unlike null, the value of an undefined variable is set by JavaScript as undefined. The variable gets
                     created at the run-time. When we do not pass an argument for a function parameter, the default value
                     is taken as undefined. Besides, when a function doesn't return a value, it returns undefined.
                 </p> <br><br>
+
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1"> What are the difference between <strong
                         class=" text-red-800">Null</strong> and <strong class=" text-red-800">Undefined</strong>?
                 </p>
@@ -201,52 +193,47 @@
                 </p><br>
                 <p class="text-lg md:text-xl lg:text-2xl font-medium pl-2 mb-2 border-l-4 border-red-700">Overview</p>
 
-                <P>A <strong>REST API</strong> (also known as RESTful API) is an application programming interface (API
-                    or web API) that
-                    conforms to the constraints of REST architectural style and allows for interaction with RESTful web
-                    services. REST stands for representational state transfer and was created by computer scientist Roy
-                    Fielding.</P>
+                <p>
+                    A <strong>REST API</strong> (also known as RESTful API) is an application programming interface (API
+                    or web API) that conforms to the constraints of REST architectural style and allows for interaction
+                    with RESTful web services. REST stands for representational state transfer and was created by
+                    computer scientist Roy Fielding.
                 <p><br><br>
+
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1"> What is <strong
                         class=" text-red-800">API</strong>?
                 </p>
                 <p> An <strong>API</strong> is a set of definitions and protocols for building and integrating
-                    application
-                    software. It's sometimes referred to as a contract between an information provider and an
-                    information user—establishing the content required from the consumer (the call) and the content
-                    required by the
-                    producer (the response). For example, the API design for a weather service could specify that the
-                    user supply a zip code and that the producer reply with a 2-part answer, the first being the high
-                    temperature, and the second being the low.</p> <br>
+                    application software. It's sometimes referred to as a contract between an information provider and
+                    an information user—establishing the content required from the consumer and the content required by
+                    the producer. <br><br>
 
-                In other words, if you want to interact with a computer or system to retrieve information or perform
-                a function, an API helps you communicate what you want to that system so it can understand and
-                fulfill the request. <br>
-
-                You can think of an API as a mediator between the users or clients and the resources or web services
-                they want to get. It’s also a way for an organization to share resources and information while
-                maintaining security, control, and authentication—determining who gets access to.
-                <br><br>
+                    In other words, if you want to interact with a computer or system to retrieve information or perform
+                    a function, an API helps you communicate what you want to that system so it can understand and
+                    fulfill the request.You can think of an API as a mediator between the users or clients and the
+                    resources or web services they want to get. It's also a way for an organization to share resources
+                    and information while maintaining security, control, and authentication—determining who gets access
+                    to it.
+                </p><br><br>
 
                 <p class="text-lg md:text-xl lg:text-2xl font-bold mb-1"> What is <strong
                         class=" text-red-800">REST</strong>?
                 </p>
 
-                <p> <strong>Rest</strong> is a set of architectural constraints, not a protocol or a
-                    standard. API
-                    developers can implement REST in a variety of ways.</p> <br>
+                <p> <strong>Rest</strong> is a set of architectural constraints, not a protocol or a standard. API
+                    developers can implement REST in a variety of ways. <br><br>
 
-                <p>When a client request is made via a RESTful API, it transfers a representation of the state of the
+                    When a client request is made via a RESTful API, it transfers a representation of the state of the
                     resource to the requester or endpoint. This information, or representation, is delivered in one of
-                    several formats via HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text.
-                    JSON is the most generally popular file format to use because, despite its name, it’s
-                    language-agnostic, as well as readable by both humans and machines. <br>
+                    several formats via HTTP. JSON is the most generally popular file format to use because, despite its
+                    name, it's
+                    language-agnostic, as well as readable by both humans and machines.
 
                     Something else to keep in mind: Headers and parameters are also important in the HTTP methods of a
                     RESTful API HTTP request, as they contain important identifier information as to the request's
                     metadata, authorization, uniform resource identifier (URI), caching, cookies, and more. There are
-                    request headers and response headers, each with their own HTTP connection information and status
-                    codes.</p>
+                    request headers and response headers, each with its own HTTP connection information and status
+                    codes.
                 </p>
             </div>
         </section>
